@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.error {
+    color: red;
+    height: 30px;
+    display: inline-block;
+    width: 100%;
+}
+
+.okmsg {
+    color: green;
+}
+
+.errormsg {
+    color: red;
+}
+
+.container {
+    height: 700px;
+}
+
+/*欢迎*/
+#welcome {
+    position: relative;
+    left: 570px;
+    top: -50px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #8e44ad;
+}
+
+/*左侧导航栏*/
+.leftNav {
+    width: 200px;
+    height: 150px;
+    background-color: white;
+    position: relative;
+    left: 250px;
+    top: 40%;
+    transform: translate(-50%, 10%);
+}
+
+
+.leftNav ul {
+
+}
+
+.leftNav ul li {
+    list-style: none;
+    background-color: #9980FA;
+
+}
+
+.leftNav li a {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    display: block;
+    color: white;
+    text-indent: 1em;
+}
+
+.leftNav li a:hover {
+    background-color: coral;
+}
+
+
+/*上侧导航栏*/
+/*.upNav {*/
+/*    width: 200px;*/
+/*    height: 150px;*/
+/*    background-color: white;*/
+/*    position: relative;*/
+/*    left: 250px;*/
+/*    top: 25%;*/
+/*    transform: translate(-50%, 10%);*/
+/*}*/
+
+
+.upNav {
+    position: relative;
+    left: 570px;
+    top: -40px;
+    width: 600px;
+    height: 60px;
+    font-size: 35px;
+}
+
+.upNav ul li {
+    width: 200px;
+    height: 50px;
+    display: inline;
+    list-style: none;
+    background-color: #9980FA;
+    color: white;
+    border-radius: 20px;
+
+}
+
+.upNav li a {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#updatePassword {
+
+}
+
+.update-wrapper {
+    background-image: linear-gradient(125deg, #dff9fb, #cd84f1, #9980FA, #D980FA, #FDA7DF, #FDA7DF, #D980FA, #9980FA, #cd84f1, #dff9fb);
+    width: 400px;
+    height: 460px;
+    padding: 0 50px;
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    opacity: .7;
+    border-radius: 400px;
+    /*transform: translate(-50%, 10%);*/
+}
+
+.update {
+    margin-left: 40%;
+    font-size: 20px;
+    width: 80px;
+    height: 30px;
+}
+
+fieldset {
+    display: block;
+    margin-top: 82px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+legend {
+    font-size: 20px;
+}
+
+.bottom-box {
+    position: relative;
+    top: -180px;
+}
+

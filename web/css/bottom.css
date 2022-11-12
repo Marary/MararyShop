@@ -1,0 +1,98 @@
+
+hr {
+    position: absolute;
+    left: 10%;
+    top: 60%;
+    width: 80%;
+    margin: 10px auto;
+    height: 1px;
+    background-image: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0),
+            cyan,
+            rgba(0, 0, 0, 0)
+    );
+}
+
+
+.bottom-box {
+    position: relative;
+    top: 180px;
+    background-color: #bdc3c7;
+    background-image: linear-gradient(90deg, #bdc3c7, #ecf0f1, #ffffff, #ffffff, #ecf0f1, #bdc3c7);
+    height: 200px;
+    font: 16px "Harlow Solid Italic";
+}
+
+.bottom-box-top {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 10px;
+}
+
+.bottom-box-bottom {
+    position: absolute;
+    width: 80%;
+    top: 75%;
+    left: 23%;
+}
+
+.bottom-box-info1 {
+    position: absolute;
+}
+
+.bottom-box-info2 {
+    position: absolute;
+    left: 160px;
+}
+
+.bottom-box-info3 {
+    position: absolute;
+    left: 320px;
+}
+
+.bottom-box-info4 {
+    position: absolute;
+    left: 480px;
+}
+
+.bottom-box-info5 {
+    position: absolute;
+    left: 850px;
+    top: 20px;
+}
+
+.bottom-box ul li {
+    font-size: small;
+}
+
+.qq-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.github-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.phone-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.time-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    font-size: 12px;
+}

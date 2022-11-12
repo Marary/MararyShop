@@ -1,0 +1,117 @@
+
+* {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.mainPart {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 800px;
+    background-color: #0fbcf9;
+}
+
+/*返回*/
+.return {
+    position: relative;
+    width: 120px;
+    height: 40px;
+    top: -300px;
+    left: 100px;
+    background-color: #B53471;
+}
+
+/*地址信息等*/
+.address_info {
+    position: relative;
+    top: -150px;
+    left: 100px;
+    width: 300px;
+    height: 200px;
+    background-color: #0bdf9f;
+}
+
+.address {
+    position: absolute;
+    top: 20px;
+}
+
+.phone {
+    position: absolute;
+    top: 40px;
+}
+
+.name {
+    position: absolute;
+    top: 60px;
+}
+
+/*订单信息*/
+.order_info {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    top: 50px;
+    left: -150px;
+    background-color: #8e44ad;
+}
+
+.detail_name {
+    position: absolute;
+    top: 20px;
+}
+
+.detail_price {
+    position: absolute;
+    top: 40px;
+}
+
+.detail_number {
+    position: absolute;
+    top: 60px;
+}
+
+.detail_freight {
+    position: absolute;
+    top: 80px;
+}
+
+.detail_total {
+    position: absolute;
+    top: 100px;
+}
+
+/*用户操作板块*/
+.operation {
+    position: relative;
+    width: 240px;
+    height: 60px;
+    top: 200px;
+    left: -380px;
+    background-color: #A3CB38;
+}
+
+#goToPay {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#letMeThink {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,37 @@
+
+#order_detail {
+    position: relative;
+    left: 500px;
+}
+
+#detailTable {
+    position: relative;
+    left: 500px;
+    text-align: center;
+    border: 1px solid #0094ff;
+    border-collapse: separate;
+    background-color: white;
+    border-spacing: 20px 10px;
+}
+
+.detailInfo {
+    color: cornflowerblue;
+}
+
+h2 {
+    margin-top: 10%;
+}
+
+#detailTable th {
+    min-width: 50px;
+    max-width: 100px;
+    height: 30px;
+}
+
+#detailTable td {
+    min-width: 50px;
+    max-width: 150px;
+    height: 60px;
+
+    /*border-radius: 30px;*/
+}

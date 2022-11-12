@@ -1,0 +1,105 @@
+#order_info {
+    position: relative;
+    top: 40px;
+}
+
+
+#orderTable {
+    text-align: center;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 10%);
+
+    border-collapse: separate;
+    border-spacing: 0px 10px;
+    background-color: white;
+    border-radius: 15px;
+
+
+}
+
+#orderTitle {
+
+    color: #C91623;
+    text-align: center;
+    position: relative;
+    top: 60px;
+    font-size: 40px;
+}
+
+#tableHead {
+    font-size: 25px;
+    background-color: #9980FA;
+    color: white;
+
+    border-radius: 15px;
+}
+
+#tableBody {
+    background-color: #fff4e8;
+
+    border-radius: 20px;
+}
+
+#orderTable th {
+    min-width: 150px;
+    max-width: 100px;
+    height: 30px;
+}
+
+#orderTable td {
+    min-width: 50px;
+    max-width: 100px;
+    height: 60px;
+
+    /*border-radius: 30px;*/
+}
+
+.imgItem {
+    width: 80px;
+    height: 60px;
+
+    cursor: pointer;
+}
+
+#orderTable tbody td a {
+    color: blue;
+}
+
+#orderTable tbody td a:hover {
+    cursor: pointer;
+    color: #1a0099;
+}
+
+/*分页样式*/
+/*考虑改为相对定位*/
+#pager {
+    position: absolute;
+    left: 45%;
+    top: 105%;
+
+    font-size: 30px;
+}
+
+#pageStyle {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #CCC;
+    line-height: 32px;
+    text-align: center;
+    color: #999;
+    margin-top: 20px;
+    text-decoration: none;
+
+}
+
+#pageStyle:hover {
+    background-color: #CCC;
+}
+
+#pageStyle .active {
+    background-color: #0CF;
+    color: #ffffff;
+}

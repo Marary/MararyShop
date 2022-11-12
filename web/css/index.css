@@ -1,0 +1,68 @@
+
+
+.box {
+    position: absolute;
+    left: 220px;
+    overflow: hidden;
+    width: 600px;
+    height: 400px;
+}
+
+.main {
+    position: absolute;
+    width: 3600px;
+    height: 400px;
+}
+
+.main img {
+    float: left;
+    width: 600px;
+    height: 400px;
+}
+
+.next,
+.last {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 60px;
+}
+
+.next {
+    right: 0;
+    background: url(../img/右.png) no-repeat center center / 32px 32px rgba(255, 255, 255, 0.5);
+}
+
+.last {
+    left: 0;
+    background: url(../img/左.png) no-repeat center center / 32px 32px rgba(255, 255, 255, 0.5);
+}
+
+.btns {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+}
+
+.btns span {
+    float: left;
+    display: block;
+    margin: 4px;
+    width: 14px;
+    height: 14px;
+    background-color: #ffffff80;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btns span:nth-child(1) {
+    background-color: deepskyblue;
+    color: #fff;
+}
+

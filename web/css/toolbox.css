@@ -1,0 +1,27 @@
+
+#toolbox {
+    width: 130px;
+    height: 200px;
+    margin-top: 10px;
+    background: rgb(43, 221, 255);
+    position: relative;
+    left: -130px;
+    top: 0;
+}
+
+#toolbox span {
+    width: 20px;
+    background: rgb(255, 119, 157);
+    position: absolute;
+    left: 130px;
+    top: 75px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px 1px 5px 0;
+    border-radius: 0 5px 5px 0;
+}
+
+#toolbox span:hover {
+    background: rgb(255, 84, 137);
+}
