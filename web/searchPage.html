@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>迈阿瑞</title>
+    <script type="text/javascript" src="js/axios-0.18.0.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+    <link rel="shortcut icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/bottom.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/toolbox.css">
+    <link rel="stylesheet" href="css/searchPage.css">
+
+</head>
+<body>
+<div class="header wrapper">
+
+    <div class="nav">
+        <ul>
+            <li class="obj_link" id="obj_1"><a href="#">首页</a></li>
+            <li class="obj_link" id="obj_2"><a href="#">我的订单</a></li>
+            <li class="obj_link" id="obj_3"><a href="#">购物车</a></li>
+            <li class="obj_link" id="personal_center"><a href="#">个人中心</a></li>
+            <li class="obj_link" id="log_out"><a href="#">退出登录</a></li>
+            <div class="nav-box"></div>
+        </ul>
+    </div>
+
+</div>
+<div class="search-box wrapper">
+    <h1 class="logo_tip">
+        <a href="#"><img id="logo" src="img/logo.png" alt=""><i class="logo_info">迈阿瑞</i></a>
+    </h1>
+    <form autocomplete="off" id="main">
+        <div class="content">
+            <input type="text" placeholder="开始查找你的小可爱" id="keyword">
+            <a href="#">
+                <i class="fa fa-hand-o-right"></i>
+                <i class="fa fa-search" id="search"></i>
+            </a>
+            <div id="show" class="show">
+                <table id="animalTable" border="1" cellspacing="0" width="100%">
+
+                </table>
+            </div>
+        </div>
+    </form>
+</div>
+<div id="toolbox">
+    <div class="tool_1"><a href="#top">回到顶部</a></div>
+    <span id="share">工具</span>
+</div>
+
+<div class="classify wrapper" id="classify">
+    <div class="classify_animal" id="all_classify" onclick="getAllItem(JSON.stringify('all'))">全部分类</div>
+    <div class="classify_animal" id="classify_dog">
+        <div class="classify_dog" id="class_dog" onclick="selectGoods('狗')">狗</div>
+        <div class="classify_dog" id="kirky" onclick="selectGoods('柯基')">柯基</div>
+        <div class="classify_dog" id="labrador" onclick="selectGoods('拉布拉多')">拉布拉多</div>
+        <div class="classify_dog" id="poodle" onclick="selectGoods('贵宾犬')">贵宾犬</div>
+        <div class="classify_dog" id="shiba" onclick="selectGoods('柴犬')">柴犬</div>
+        <div class="classify_dog" id="husky" onclick="selectGoods('哈士奇')">哈士奇</div>
+    </div>
+    <div class="classify_animal" id="classify_cat">
+        <div class="classify_cat" id="class_cat" onclick="selectGoods('猫')">猫</div>
+        <div class="classify_cat" id="bobcat" onclick="selectGoods('英短猫')">英短猫</div>
+        <div class="classify_cat" id="dragon_li" onclick="selectGoods('狸花猫')">狸花猫</div>
+        <div class="classify_cat" id="persia" onclick="selectGoods('波斯猫')">波斯猫</div>
+        <div class="classify_cat" id="ragdoll" onclick="selectGoods('布偶猫')">布偶猫</div>
+        <div class="classify_cat" id="sphinx" onclick="selectGoods('斯芬克斯猫')">斯芬克斯猫</div>
+    </div>
+    <div class="classify_animal" id="classify_bird">
+        <div class="classify_bird" id="class_bird" onclick="selectGoods('鸟')">鸟</div>
+        <div class="classify_bird" id="dove" onclick="selectGoods('鸽子')">鸽子</div>
+        <div class="classify_bird" id="lark" onclick="selectGoods('百灵鸟')">百灵鸟</div>
+        <div class="classify_bird" id="oriole" onclick="selectGoods('黄鹂')">黄鹂</div>
+        <div class="classify_bird" id="parrot" onclick="selectGoods('鹦鹉')">鹦鹉</div>
+        <div class="classify_bird" id="sparrow" onclick="selectGoods('麻雀')">麻雀</div>
+    </div>
+    <div class="classify_animal" id="classify_fish">
+        <div class="classify_fish" id="class_fish" onclick="selectGoods('鱼')">鱼</div>
+        <div class="classify_fish" id="arhat" onclick="selectGoods('罗汉鱼')">罗汉鱼</div>
+        <div class="classify_fish" id="clownfish" onclick="selectGoods('小丑鱼')">小丑鱼</div>
+        <div class="classify_fish" id="goldfish" onclick="selectGoods('金鱼')">金鱼</div>
+        <div class="classify_fish" id="guppy" onclick="selectGoods('孔雀鱼')">孔雀鱼</div>
+        <div class="classify_fish" id="lucky_charm" onclick="selectGoods('锦鲤')">锦鲤</div>
+    </div>
+    <div class="classify_animal" id="classify_tortoise">
+        <div class="classify_tortoise" id="class_tortoise" onclick="selectGoods('龟')">龟</div>
+        <div class="classify_tortoise" id="brazi" onclick="selectGoods('巴西龟')">巴西龟</div>
+        <div class="classify_tortoise" id="graptemys" onclick="selectGoods('地图龟')">地图龟</div>
+        <div class="classify_tortoise" id="musk" onclick="selectGoods('麝香龟')">麝香龟</div>
+        <div class="classify_tortoise" id="snapping" onclick="selectGoods('鳄龟')">鳄龟</div>
+        <div class="classify_tortoise" id="tortoise" onclick="selectGoods('中华草龟')">中华草龟</div>
+    </div>
+</div>
+
+
+<div id="myModal" style="display: none">
+    <span id="modal_item">添加成功</span>
+</div>
+
+<!--照片版 左/右-->
+<div id="commodity_about">
+    <div class="commodity wrapper" id="commodity_1">
+
+    </div>
+    <div class="commodity wrapper" id="commodity_2">
+
+    </div>
+</div>
+
+<!--商品信息版面-->
+<div class="wrapper" id="commodity_info">
+    <div class="commodity_1 wrapper" id="commodity_3">
+        <!--        <div><img class="goods_item" src="img/cat.jpg" alt=""></div>-->
+    </div>
+    <div class="commodity_1 wrapper" id="commodity_4">
+        <!--        <div>-->
+        <!--            <div id='item_id_info' class='item_info' style='display:none;'>-->
+        <!--                商品编号：-->
+        <!--                <input type='text' id='item_info' disabled='disabled'class='item_number'>-->
+        <!--            </div>-->
+        <!--            <div id='item_top' class='item_info'>-->
+        <!--                商品名称</div>-->
+        <!--            <div class='item_info'>-->
+        <!--                商品价格：-->
+        <!--            </div>-->
+        <!--            <div class='item_info' id='pro_number'>商品数量：-->
+        <!--                <button onclick="checkTest3(this,1)">-</button>-->
+        <!--                <input type="text" class="product_number" name=\"\"  value="1" >-->
+        <!--                <button class="bot" onclick="checkTest3(this,2)">+</button>-->
+        <!--            </div>-->
+        <!--            <div class="addCart_btn">-->
+        <!--                <img src="img/addCart.png" onclick="addCart(this)" alt=''>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--    </div>-->
+    </div>
+</div>
+
+<!--推荐商品-->
+<div class="wrapper recommend" id="recommend">
+    <!--    <h3 id="recommend_label">为你推荐</h3>-->
+</div>
+<div class="wrapper recommend_info" id="recommend_info">
+    <!--    <div class="recommend_item"><img class="recommend_img" src="img/cat.jpg"></div>-->
+    <!--    <div class="recommend_item"><img class="recommend_img" src="img/cat.jpg"></div>-->
+    <!--    <div class="recommend_item"><img class="recommend_img" src="img/cat.jpg"></div>-->
+    <!--    <div class="recommend_item"><img class="recommend_img" src="img/cat.jpg"></div>-->
+</div>
+
+<!--页脚-->
+<div class="wrapper bottom-box">
+    <div class="bottom-box-top">
+        <ul class="bottom-box-info1">
+            购物指南
+            <li>购物流程</li>
+            <li>常见问题</li>
+            <li>会员介绍</li>
+            <li>联系客服</li>
+        </ul>
+        <ul class="bottom-box-info2">
+            配送方式
+            <li>上门自提</li>
+            <li>海外配送</li>
+            <li>配送服务查询</li>
+            <li>配送费收取标准</li>
+        </ul>
+        <ul class="bottom-box-info3">
+            支付方式
+            <li>货到付款</li>
+            <li>在线支付</li>
+            <li>分期付款</li>
+            <li>公司转账</li>
+        </ul>
+        <ul class="bottom-box-info4">
+            售后保障
+            <li>售后政策</li>
+            <li>价格保护</li>
+            <li>退款说明</li>
+            <li>取消订单</li>
+        </ul>
+    </div>
+
+    <div class="bottom-box-info5">
+        <h3>联系我们</h3>
+        <span class="qq-box">邮箱: 1821166153@qq.com</span>
+        <span class="phone-box">电话: 18522631800</span>
+        <span class="github-box">更多:
+            <a href="https://github.com/Marary/Marary" style="color: black">https://github.com/Marary/Marary</a>
+        </span>
+        <span class="time-box">周一到周日6:00到22:00</span>
+    </div>
+
+    <hr>
+    <div class="bottom-box-bottom">
+        <span>© 2022 · 迈阿瑞 · ALL RIGHTS RESERVED · 湖南省长沙市 中南大学 软件工程2103班6组</span>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/home.js"></script>
+<script type="text/javascript" src="js/goods.js"></script>
+<script type="text/javascript" src="js/searchPage.js"></script>
+
+<script type="text/javascript" src="js/toolbox.js"></script>
+</body>
+</html>

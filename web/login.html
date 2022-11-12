@@ -1,0 +1,44 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>迈阿瑞</title>
+    <link rel="shortcut icon" href="img/logo.png">
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="css/login.css">
+    <script type="text/javascript" src="js/axios-0.18.0.js"></script>
+
+</head>
+<body>
+
+<form name="login_form" action="" method="post">
+    <div class="container">
+        <div class="login-wrapper">
+            <div class="header">Login</div>
+
+            <div class="form-wrapper">
+                <input type="text" id="username" name="username" placeholder="Username/Email/Phone Number"
+                       class="input-item">
+                <input type="password" id="password" name="password" placeholder="Password" class="input-item">
+
+                <input type="text" class="input-item" name="verification_code" placeholder="Verification Code"
+                       maxlength="4" onblur="checkValidateCode()">
+                <span style="position:relative;width: 250px">This is the verification code:</span>
+                <span style="position: relative;width: 100px"><img id="validate-code" src="ValidateCodeServlet"
+                                                                   onclick="changeValidateCode()"></span>
+                <span class="error" id="validateErr"></span>
+
+                <div class="login-box"><a href="#" class="btn" id="login_btn">Login</a></div>
+            </div>
+            <div class="msg">
+                Don't have account?
+                <a href="http://localhost:726/marary/register.html">Sign up</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/payForItem.css">
+
+</head>
+<body>
+
+<button id="back_btn" onclick="back()">返回</button>
+
+<div class="container">
+    <div class="card">
+        <div class="content">
+            <h2>01</h2>
+            <h3>微信支付</h3>
+            <p>选择使用微信支付</p>
+            <a href="#" onclick="wechat()">选择</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <h2>02</h2>
+            <h3>支付宝支付</h3>
+            <p>选择使用支付宝支付</p>
+            <a href="#" onclick="alipay()">选择</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <h2>03</h2>
+            <h3>银联支付</h3>
+            <p>选择使用银行卡进行支付</p>
+            <a href="#" onclick="bank()">选择</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <h2>04</h2>
+            <h3>余额支付</h3>
+            <p>选择使用迈阿瑞商城余额进行支付</p>
+            <a href="#" onclick="balance()">选择</a>
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" src="js/vanilla-tilt.js"></script>
+<script type="text/javascript" src="js/payForItem.js"></script>
+</html>

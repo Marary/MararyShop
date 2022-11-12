@@ -1,0 +1,58 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>迈阿瑞</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <link rel="shortcut icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/register.css">
+    <script type="text/javascript" src="js/axios-0.18.0.js"></script>
+</head>
+<body>
+<form action="#" method="post">
+    <div class="container">
+        <div class="login-wrapper">
+            <div class="header">Register</div>
+            <div class="row">
+                <input type="text" class="input-item" name="name" id="username" placeholder="Username" maxlength="20"
+                       onblur="checkUsername()" ;>
+                <span class="error" id="nameErr"> </span>
+            </div>
+            <div class="row">
+                <input type="password" class="input-item" id="password" placeholder="Password" maxlength="20" name="pwd"
+                       onblur="checkPWD()">
+                <span class="error" id="pwdErr"> </span>
+        </div>
+        <div class="row">
+            <input type="text" class="input-item"  placeholder="Email" maxlength="30" name="email" id="email" onblur="checkEmail();">
+            <span class="error" id="emailErr"> </span>
+        </div>
+        <div class="row">
+            <input type="text" class="input-item" name="mobile" placeholder="Phone Number" maxlength="11" id="mobile"
+                   onblur="checkPhone();">
+            <span class="error" id="mobileErr"></span>
+        </div>
+            <div class="row">
+                <input type="text" class="input-item" name="verification_code" placeholder="Verification Code"
+                       maxlength="4" onblur="checkValidateCode()">
+                <span style="position:relative;width: 250px">This is the verification code:</span>
+                <span style="position:relative;;width: 100px"><img id="validate-code" src="ValidateCodeServlet"
+                                                                   onclick="changeValidateCode()"></span>
+                <span class="error" id="validateErr"> </span>
+            </div>
+
+            <div class="register-box">
+                <a href="#" class="btn" id="register_btn">Register</a>
+            </div>
+            <div class="msg">
+                Already have an account?
+                <a href="http://localhost:726/marary/login.html">Sign in</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript" src="js/register.js"></script>
+
+</body>
+</html>

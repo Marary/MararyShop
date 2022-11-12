@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>迈阿瑞</title>
+    <link rel="shortcut icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/orderDetail.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/bottom.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="js/axios-0.18.0.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+
+<!--导航开始-->
+<div class="header wrapper">
+
+    <div class="nav">
+        <ul>
+            <li class="obj_link" id="obj_1"><a href="#">首页</a></li>
+            <li class="obj_link" id="obj_2"><a href="#">我的订单</a></li>
+            <li class="obj_link" id="obj_3"><a href="#">购物车</a></li>
+            <li class="obj_link" id="personal_link"><a href="#">个人中心</a></li>
+            <li class="obj_link" id="log_out"><a href="#">退出登录</a></li>
+            <div class="nav-box"></div>
+        </ul>
+    </div>
+
+</div>
+<div class="search-box wrapper">
+    <h1 class="logo_tip">
+        <a href="#"><img id="logo" src="img/logo.png" alt=""><i class="logo_info">迈阿瑞</i></a>
+    </h1>
+    <form autocomplete="off" id="main">
+        <div class="content">
+            <input type="text" placeholder="开始查找你的小可爱" id="keyword">
+            <a href="#">
+                <i class="fa fa-hand-o-right"></i>
+                <i class="fa fa-search" id="search"></i>
+            </a>
+            <div id="show" class="show">
+                <table id="animalTable" border="1" cellspacing="0" width="100%">
+
+                </table>
+            </div>
+        </div>
+    </form>
+</div>
+<!--导航结束-->
+
+
+<h2 id="order_detail">订单详情</h2>
+
+<table id="detailTable">
+
+    <tr>
+        <td>订单编号</td>
+        <td colspan="2" id="orderNumber" class="detailInfo"></td>
+        <td rowspan="2" colspan="3">
+            <fieldset>
+                <legend>交易快照</legend>
+                <img id="imgItem" style="width: 80px; height: 60px;">
+                <label id="nameLabel"></label>
+            </fieldset>
+        </td>
+    </tr>
+    <tr>
+        <td>收货人</td>
+        <td colspan="2" id="receiver" class="detailInfo"></td>
+    </tr>
+    <tr>
+        <td>联系方式</td>
+        <td colspan="2" id="phone" class="detailInfo"></td>
+        <td>提交时间</td>
+        <td colspan="2" id="submitTime" class="detailInfo"></td>
+    </tr>
+    <tr>
+        <td>商品单价</td>
+        <td id="price" class="detailInfo"></td>
+        <td>购买数量</td>
+        <td id="quantity" class="detailInfo"></td>
+        <td>小计</td>
+        <td id="total" class="detailInfo"></td>
+    </tr>
+    <tr>
+        <td colspan="2">交易状态</td>
+        <td colspan="3" id="orderStatus" class="detailInfo"></td>
+    </tr>
+
+</table>
+
+
+<!--页脚-->
+<div class="wrapper bottom-box">
+    <div class="bottom-box-top">
+        <ul class="bottom-box-info1">
+            购物指南
+            <li>购物流程</li>
+            <li>常见问题</li>
+            <li>会员介绍</li>
+            <li>联系客服</li>
+        </ul>
+        <ul class="bottom-box-info2">
+            配送方式
+            <li>上门自提</li>
+            <li>海外配送</li>
+            <li>配送服务查询</li>
+            <li>配送费收取标准</li>
+        </ul>
+        <ul class="bottom-box-info3">
+            支付方式
+            <li>货到付款</li>
+            <li>在线支付</li>
+            <li>分期付款</li>
+            <li>公司转账</li>
+        </ul>
+        <ul class="bottom-box-info4">
+            售后保障
+            <li>售后政策</li>
+            <li>价格保护</li>
+            <li>退款说明</li>
+            <li>取消订单</li>
+        </ul>
+    </div>
+
+    <div class="bottom-box-info5">
+        <h3>联系我们</h3>
+        <span class="qq-box">邮箱: 1821166153@qq.com</span>
+        <span class="phone-box">电话: 18522631800</span>
+        <span class="github-box">更多:
+            <a href="https://github.com/Marary/Marary" style="color: black">https://github.com/Marary/Marary</a>
+        </span>
+        <span class="time-box">周一到周日6:00到22:00</span>
+    </div>
+
+    <hr>
+    <div class="bottom-box-bottom">
+        <span>© 2022 · 迈阿瑞 · ALL RIGHTS RESERVED · 湖南省长沙市 中南大学 软件工程2103班6组</span>
+    </div>
+</div>
+
+</body>
+
+<script type="text/javascript" src="js/home.js"></script>
+<script type="text/javascript" src="js/orderDetail.js "></script>
+<script type="text/javascript" src="js/checkStatus.js"></script>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>迈阿瑞</title>
+    <script type="text/javascript" src="js/axios-0.18.0.js"></script>
+    <script type="text/javascript" src="./js/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <link rel="shortcut icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/bottom.css">
+    <link rel="stylesheet" href="css/personal.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+<!--导航头-->
+<div class="header wrapper">
+
+    <div class="nav">
+        <ul>
+            <li class="obj_link" id="i_obj_1"><a href="#">首页</a></li>
+            <li class="obj_link" id="i_obj_2"><a href="#">我的订单</a></li>
+            <li class="obj_link" id="i_obj_3"><a href="#">购物车</a></li>
+            <li class="obj_link" id="login_link"><a href="#">登录</a></li>
+            <li class="obj_link" id="register_link"><a href="#">注册</a></li>
+            <div class="nav-box"></div>
+        </ul>
+    </div>
+
+</div>
+<div class="search-box wrapper">
+    <h1 class="logo_tip">
+        <a href="#"><img id="i_logo" src="img/logo.png" alt=""><i class="logo_info">迈阿瑞</i></a>
+    </h1>
+    <form autocomplete="off" id="main">
+        <div class="content">
+            <input type="text" placeholder="开始查找你的小可爱" id="keyword">
+            <a href="#">
+                <i class="fa fa-hand-o-right"></i>
+                <i class="fa fa-search" id="search"></i>
+            </a>
+            <div id="show" class="show">
+                <table id="animalTable" border="1" cellspacing="0" width="100%">
+
+                </table>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<!--左侧导航栏-->
+<div class="leftNav" id="leftLinks">
+    <ul>
+        <li><a href="http://localhost:726/marary/personal.html">编辑资料</a></li>
+        <li><a href="http://localhost:726/marary/shoppingCart.html">我的购物车</a></li>
+        <li><a href="http://localhost:726/marary/orderPage.html">我的订单</a></li>
+    </ul>
+</div>
+
+
+<!--欢迎-->
+<div id="welcome"></div>
+
+<div class="upNav" id="upNav">
+    <ul>
+        <li><a href="#" id="updatePassword" onclick="toPwd()">修改密码</a></li>
+        <li><a href="#" id="updatePhone" onclick="toPhone()">修改手机</a></li>
+        <li><a href="#" id="updateEmail" onclick="toEmail()">修改邮箱</a></li>
+        <!--        <li><a href="http://localhost:8080/marary/orderPage.html">收货地址</a></li>-->
+    </ul>
+</div>
+
+
+<!--原密码oldPassword可共用-->
+
+<!--修改密码-->
+<div class="container" id="container1">
+    <div class="update-wrapper">
+
+        <fieldset>
+            <legend>修改密码</legend>
+            <p>
+
+            <table>
+                <tr>
+                    <td><label for="oldPassword1">请输入原密码：</label></td>
+                    <td><input type="password" id="oldPassword1" name="oldPassword1" onblur="checkCorrect1()"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span id="isCorrect1" class="error"></span></td>
+                    <!--      提示密码是否正确-->
+                </tr>
+
+                <tr>
+                    <td><label for="newPassword1">请输入新密码：</label></td>
+                    <td><input type="password" id="newPassword1" name="newPassword1" onblur="checkPWD()"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span id="isAvailable1" class="error"></span></td>
+                    <!--      提示密码是否可用-->
+                </tr>
+
+                <tr>
+                    <td><label for="newPassword2">请再次输入新密码：</label></td>
+                    <td><input type="password" id="newPassword2" name="newPassword2" onblur="checkSame1()"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span id="isSame1" class="error"></span></td>
+                    <!--      提示密码是否一致-->
+                </tr>
+
+            </table>
+
+            </p>
+
+            <input type="button" class="update" id="update1" name="update1" value="修改" onclick="send1()">
+
+        </fieldset>
+
+    </div>
+</div>
+
+<!--修改手机-->
+<div class="container" id="container2">
+    <div class="update-wrapper">
+
+        <fieldset>
+            <legend>修改手机</legend>
+            <p>
+
+            <table>
+                <tr>
+                    <td><label for="oldPassword2">请输入原密码：</label></td>
+                    <td><input type="password" id="oldPassword2" name="oldPassword2" onblur="checkCorrect2()"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span id="isCorrect2" class="error"></span></td>
+                    <!--      提示密码是否正确-->
+                </tr>
+
+                <tr>
+                    <td><label for="newPhone1">请输入新手机：</label></td>
+                    <td><input type="text" id="newPhone1" name="newPhone1" onblur="checkPHONE()"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span id="isAvailable2" class="error"></span></td>
+                    <!--      提示手机是否可用-->
+                </tr>
+
+                <tr>
+                    <td><label for="newPhone2">请再次输入新手机：</label></td>
+                    <td><input type="text" id="newPhone2" name="newPhone2" onblur="checkSame2()"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span id="isSame2" class="error"></span></td>
+                    <!--      提示密码是否一致-->
+                </tr>
+
+            </table>
+
+            </p>
+
+            <input type="button" class="update" id="update2" name="update2" value="修改" onclick="send2()">
+
+        </fieldset>
+
+    </div>
+</div>
+
+
+<!--修改邮箱-->
+<div class="container" id="container3">
+    <div class="update-wrapper">
+
+        <fieldset>
+            <legend>修改邮箱</legend>
+            <p>
+
+            <table>
+                <tr>
+                    <td><label for="oldPassword3">请输入原密码：</label></td>
+                    <td><input type="password" id="oldPassword3" name="oldPassword3" onblur="checkCorrect3()"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span id="isCorrect3" class="error"></span></td>
+                    <!--      提示密码是否正确-->
+                </tr>
+
+                <tr>
+                    <td><label for="newEmail1">请输入新邮箱：</label></td>
+                    <td><input type="text" id="newEmail1" name="newEmail1" onblur="checkEMAIL()"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span id="isAvailable3" class="error"></span></td>
+                    <!--      提示邮箱是否可用-->
+                </tr>
+
+                <tr>
+                    <td><label for="newEmail2">请再次输入新邮箱：</label></td>
+                    <td><input type="text" id="newEmail2" name="newEmail2" onblur="checkSame3()"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span id="isSame3" class="error"></span></td>
+                    <!--      提示密码是否一致-->
+                </tr>
+
+            </table>
+
+            </p>
+
+            <input type="button" class="update" id="update3" name="update3" value="修改" onclick="send3()">
+
+        </fieldset>
+
+    </div>
+</div>
+
+
+<!--页脚-->
+<div class="wrapper bottom-box">
+    <div class="bottom-box-top">
+        <ul class="bottom-box-info1">
+            购物指南
+            <li>购物流程</li>
+            <li>常见问题</li>
+            <li>会员介绍</li>
+            <li>联系客服</li>
+        </ul>
+        <ul class="bottom-box-info2">
+            配送方式
+            <li>上门自提</li>
+            <li>海外配送</li>
+            <li>配送服务查询</li>
+            <li>配送费收取标准</li>
+        </ul>
+        <ul class="bottom-box-info3">
+            支付方式
+            <li>货到付款</li>
+            <li>在线支付</li>
+            <li>分期付款</li>
+            <li>公司转账</li>
+        </ul>
+        <ul class="bottom-box-info4">
+            售后保障
+            <li>售后政策</li>
+            <li>价格保护</li>
+            <li>退款说明</li>
+            <li>取消订单</li>
+        </ul>
+    </div>
+
+    <div class="bottom-box-info5">
+        <h3>联系我们</h3>
+        <span class="qq-box">邮箱: 1821166153@qq.com</span>
+        <span class="phone-box">电话: 18522631800</span>
+        <span class="github-box">更多:
+            <a href="https://github.com/Marary/Marary" style="color: black">https://github.com/Marary/Marary</a>
+        </span>
+        <span class="time-box">周一到周日6:00到22:00</span>
+    </div>
+
+    <hr>
+    <div class="bottom-box-bottom">
+        <span>© 2022 · 迈阿瑞 · ALL RIGHTS RESERVED · 湖南省长沙市 中南大学 软件工程2103班6组</span>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="js/home.js"></script>
+<script type="text/javascript" src="js/personal.js "></script>
+
+</body>
+</html>
